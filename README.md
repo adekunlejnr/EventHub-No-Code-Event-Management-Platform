@@ -6,6 +6,31 @@ The project demonstrates how **Airtable**, **Softr**, **n8n**, and **Google Gemi
 
 ---
 
+## 📸 Screenshots
+
+### Home Page — Event Listings
+![Home Page](screenshots/home-page.png)
+
+### Event Details — Register & Feedback
+![Event Details](screenshots/event-details.png)
+
+### Register Page
+![Register](screenshots/register-page.png)
+
+### My Tickets — Logged-in Attendee View
+![My Tickets](screenshots/my-tickets.png)
+
+### Organiser Dashboard
+![Organiser Dashboard](screenshots/organiser-dashboard.png)
+
+### AI Feedback Report Email
+![Feedback Report](screenshots/feedback-report-email.png)
+
+### n8n Workflow — Confirmation & Waitlist
+![n8n Workflow](screenshots/n8n-workflow.png)
+
+---
+
 ## 🧱 Tech Stack
 
 | Layer | Tool | Purpose |
@@ -163,7 +188,7 @@ Schedule Trigger
 eventhub/
 ├── README.md
 ├── n8n-workflows/
-│   ├── registration-confirmation.json
+│   ├── confirmation-waitlist.json
 │   └── feedback-summary-report.json
 ├── docs/
 │   ├── airtable-schema.md
@@ -174,7 +199,8 @@ eventhub/
     ├── register-page.png
     ├── my-tickets.png
     ├── organiser-dashboard.png
-    └── feedback-report-email.png
+    ├── feedback-report-email.png
+    └── n8n-workflow.png
 ```
 
 ---
@@ -184,7 +210,7 @@ eventhub/
 1. **Airtable:** Duplicate the base structure described above, including the `Last Modified` and `Email Sent` fields on Registrations.
 2. **Softr:** Connect to your Airtable base and recreate the 7 pages, applying the visibility rules listed above.
 3. **n8n:**
-   - Import `registration-confirmation.json` and `feedback-summary-report.json` from `n8n-workflows/`
+   - Import `confirmation-waitlist.json` and `feedback-summary-report.json` from `n8n-workflows/`
    - Add your Airtable Personal Access Token (scopes: `data.records:read`, `data.records:write`, `schema.bases:read`)
    - Add your Gmail and Google Gemini credentials
    - Activate (publish) both workflows
